@@ -1,0 +1,11 @@
+version: 2
+
+models:
+    - name: stg_baseball_post
+      description: staging data from source data
+      columns: 
+        - name: gameid
+          description: unique id of each game
+          tests:
+            - not_null
+
