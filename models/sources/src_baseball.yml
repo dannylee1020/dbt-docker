@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+    - name: bigquery_baseball_data
+      database: airflow-sandbox-296122
+      schema: airflow_dbt
+
+      tables:
+        - name: games_post_wide
+          description: baseball games data from bigquery public dataset
+          columns:
+            - name: gameid
+              test:
+                - not_null
+
