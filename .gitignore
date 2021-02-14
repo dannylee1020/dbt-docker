@@ -1,0 +1,10 @@
+
+target/
+dbt_modules/
+logs/
+
+# empty files
+analysis/
+data/
+macros/
+snapshots/
