@@ -1,0 +1,36 @@
+version: 2
+
+models:
+    - name: pitch_type_info
+      description: average pitch count and pitch speed for starter pitchers for all post games
+      columns:
+        - name: pitch_type
+          description: types of different pitches
+          tests:
+            - accepted_values:
+                values: [Fastball, Sinker, Curveball, Slider, Cutter, Changeup, Intentional Ball]
+        
+        - name: overall_avg_pitchspeed
+          description: average pitch speed of starter pitchers in post games
+          tests:
+            - not_null
+        
+        - name: overall_avg_pitch_count
+          description: average number of pitches of starter pitches in post games
+          tests:
+            - not_null
+    
+            
+    - name: batting_outcome
+      description: outcome of the batting by hitter's hand type
+      columns:
+        - name: hitterBatHand
+          description: which type of hand hitter is
+          tests:
+            - not_null 
+            - accepted_values:
+                values: ['B', 'R', 'L']
+
+        - name: outcome_description
+          description: the outcome of the batting
+          
