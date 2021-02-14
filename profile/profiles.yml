@@ -1,0 +1,13 @@
+baseball_dbt:
+    target: dev
+    outputs:
+      dev:
+        type: bigquery
+        method: oauth
+        project: airflow-sandbox-296122
+        dataset: airflow_dbt # You can also use "schema" here
+        threads: 4
+        timeout_seconds: 300
+        location: US # Optional, one of US or EU
+        priority: interactive
+        retries: 1
