@@ -8,3 +8,5 @@ analysis/
 data/
 macros/
 snapshots/
+
+.env
