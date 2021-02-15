@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+    dbt-docker:
+        image: dannylee1020/baseball_dbt:latest
+        volumes:
+            - /Users/dhyungseoklee/.config/gcloud:/root/.config/gcloud
+        build: .
+        restart: always
